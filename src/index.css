@@ -1,0 +1,35 @@
+body {
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* Light text color for contrast */
+  font-family: Arial, sans-serif; /* Default font */
+}
+
+button, input[type="checkbox"], label {
+  background-color: #333333; /* Darker elements for contrast */
+  color: #ffffff;
+  border: 1px solid #444444;
+  padding: 10px;
+  margin: 5px;
+}
+
+button:hover, input[type="checkbox"]:hover {
+  background-color: #555555; /* Slightly lighter on hover */
+}
+
+input[type="checkbox"] {
+  accent-color: #4CAF50; /* Custom color for checkbox */
+}
+
+#directory-structure, #status {
+  border: 1px solid #333333;
+  padding: 10px;
+  margin-top: 10px;
+  overflow-y: auto;
+  height: 150px;
+  background-color: #222222;
+}
+
+ul {
+  list-style-type: none; /* Removes bullet points from lists */
+  padding: 0;
+}

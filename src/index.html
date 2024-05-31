@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Sorter App</title>
+  </head>
+  <body>
+    <h1>File Sorter App</h1>
+    <div>
+      TODOLIST:
+      <ul>
+        <li>Suggest folder creation for a better structure (Assistant)</li>
+        <li>
+          Organize folders (only): If you want to only use already existing
+          folders and sort them into your structure. TODO: Only check file
+          entries from the next level of the folder.
+        </li>
+      </ul>
+    </div>
+    <button id="select-directory">Select Main Directory</button>
+    <div id="selected-path"></div>
+    <div
+      id="drop-area"
+      style="
+        border: 2px dashed #ccc;
+        margin: 20px;
+        padding: 20px;
+        text-align: center;
+      "
+    >
+      Drop files or folders here
+    </div>
+    <div id="file-list"></div>
+
+    <label>
+      <input type="checkbox" id="auto-process-toggle" /> Process Automatically
+    </label>
+    <div id="status"></div>
+    <div id="directory-structure"></div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>
