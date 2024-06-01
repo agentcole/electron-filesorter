@@ -8,5 +8,6 @@ export const IPC_CHANNELS = {
     GET_FOLDER_PATHS: 'get-folder-paths',
     MOVE_FILE: 'move-file',
     PERFORM_API_REQUEST: 'perform-api-request',
-    WHISPER_TRANSCRIBE: 'whisper-transcribe'
+    WHISPER_TRANSCRIBE: 'whisper-transcribe',
+    SEARCH_VECTOR_DB: 'search-vector-db',
 };

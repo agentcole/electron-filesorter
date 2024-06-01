@@ -46,9 +46,9 @@ npx whisper-node download # choose a model
 # Build
 
 - TODO: Add extra files (in build config / electron forg) for binaries e.g. whisper, ffmpeg, tesseract, models, ollama
-- - Most important here is whisper with models and ffmpeg
+    - Most important here is whisper with models and ffmpeg
 - Warning: in webpack.main.config.ts for a PACKAGE build these lines need to be removed:
-- - This needs to be reviewed to know what happens in the build process
+    - This needs to be reviewed to know what happens in the build process
 
 ```js
 ...

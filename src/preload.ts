@@ -2,6 +2,7 @@
 // https://www.electronjs.org/docs/latest/tutorial/process-model#preload-scripts
 import { contextBridge, ipcRenderer, IpcRendererEvent } from "electron";
 import { IPC_CHANNELS } from "./shared/ipc-constants";
+import { SearchModel } from "./lib/chains/search-index";
 
 // Expose a secure API to the renderer process
 export const electronAPI = {
@@ -37,6 +38,9 @@ export const electronAPI = {
 
   moveFile: (oldPath: string, newPath: string): Promise<string> =>
     ipcRenderer.invoke(IPC_CHANNELS.MOVE_FILE, oldPath, newPath),
+
+  searchVectorDb: (query: string): Promise<Partial<SearchModel>[]> =>
+    ipcRenderer.invoke(IPC_CHANNELS.SEARCH_VECTOR_DB, query),
 
   performApiRequest: (data: {
     fileName: string;

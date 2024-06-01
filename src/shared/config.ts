@@ -5,8 +5,10 @@ export const OLLAMA_VISION_MODEL = "llava";
 export const OLLAMA_LLM_MODEL = "llama3";
 export const OLLAMA_TRANSLATION_MODEL= "winkefinger/alma-13b"
 
-// vectra
-export const VECTRA_DB_PROMPT = "Represent this text for searching relevant informations: ";
+// vectordb / lance
+export const VECTRORDB_PROMPT = "Represent this text for searching relevant informations: ";
+export const VECTORDB_DATABASE_URI = "data/filesearch";
+export const VECTORDB_TABLE_NAME = "filesearch";
 
 // tool configuration
 export const toolsMimeType: ToolMimeType[] = [

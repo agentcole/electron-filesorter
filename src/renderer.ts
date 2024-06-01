@@ -1,5 +1,5 @@
 import { IPC_CHANNELS } from "./shared/ipc-constants";
-import './index.css';
+import "./index.css";
 
 window.electronAPI.onDirectorySelected((path: string) => {
   document.getElementById(
@@ -26,6 +26,15 @@ document
   });
 
 // Directory Selection Handling
+document.getElementById("search")!.addEventListener("click", async () => {
+  const query = (document.getElementById("search-field") as HTMLInputElement)
+    .value;
+
+  const searchRes = await window.electronAPI.searchVectorDb(query);
+  document.querySelector("#results").innerHTML = searchRes
+    .map((item) => "<p>" + item.file_path + "</p>")
+    .join("");
+});
 document
   .getElementById("select-directory")!
   .addEventListener("click", async () => {
@@ -115,5 +124,3 @@ function displayStructure(structure: any[]): void {
   directoryStructure.innerHTML = ""; // Clear previous content
   directoryStructure.appendChild(createList(structure));
 }
-
-
