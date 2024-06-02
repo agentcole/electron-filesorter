@@ -30,9 +30,11 @@ document.getElementById("search")!.addEventListener("click", async () => {
   const query = (document.getElementById("search-field") as HTMLInputElement)
     .value;
 
-  const searchRes = await window.electronAPI.searchVectorDb(query);
-  document.querySelector("#results").innerHTML = searchRes
-    .map((item) => "<p>" + item.file_path + "</p>")
+  // const searchRes = await window.electronAPI.searchVectorDb(query);
+  const searchRes = await window.electronAPI.searchFuseDb(query);
+  console.log(searchRes);
+  // document.querySelector("#results").innerHTML = searchRes.sort((a,b )=> a._distance - b._distance)
+  document.querySelector("#results").innerHTML = searchRes.map((item) => "<p>" + item.file_path + "</p>")
     .join("");
 });
 document

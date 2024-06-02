@@ -4,7 +4,7 @@ import {
   VECTRORDB_PROMPT,
   VECTORDB_DATABASE_URI,
   VECTORDB_TABLE_NAME,
-} from "../shared/config";
+} from "../../shared/config";
 
 import { Connection, Table, connect } from "vectordb";
 import {

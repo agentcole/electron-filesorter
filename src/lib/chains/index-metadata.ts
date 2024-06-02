@@ -3,14 +3,15 @@ import {
 } from "../file-utils";
 import { logger } from "../logger";
 import { llmRequest } from "../ollama";
-import { LanceVectorDB } from "../vector-db";
+import { LanceVectorDB } from "../db/vector-db";
+import { FuseLowDB } from "../db/fuse-lowdb";
 
 /**
  * @param fileMeta
  * @param textData
  * @returns
  */
-export const searchVectorsChain = async (
+export const llmIndexMetadataChain = async (
   fileMeta: FileMetadata,
   textData: string
 ) => {
@@ -78,6 +79,9 @@ export const searchVectorsChain = async (
 
   const db = await LanceVectorDB.getInstance();
   await db.addItem(summary, searchModel);
+
+  const fuseDb = await FuseLowDB.getInstance();
+  await fuseDb.addItem(searchModel)
 };
 
 export interface SearchModel {

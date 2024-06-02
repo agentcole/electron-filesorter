@@ -12,8 +12,14 @@ Supported file formats:
 
 DB:
 
-- Vectra
+- LanceDB
 - Embeddings: https://ollama.com/library/mxbai-embed-large
+
+# Todos
+- Fix vector distance problem with lancedb: The results are awful
+- Implement https://github.com/do-me/SemanticFinder instead
+- Or use a simple text search: https://lunrjs.com/ or https://www.fusejs.io/
+- Use react for renderer
 
 # Installation
 

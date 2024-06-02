@@ -10,4 +10,5 @@ export const IPC_CHANNELS = {
     PERFORM_API_REQUEST: 'perform-api-request',
     WHISPER_TRANSCRIBE: 'whisper-transcribe',
     SEARCH_VECTOR_DB: 'search-vector-db',
+    SEARCH_FUSE_DB: 'search-fuse-db'
 };

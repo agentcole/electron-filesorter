@@ -1,5 +1,5 @@
 import { ipcMain } from "electron";
-import { LanceVectorDB } from "../lib/vector-db";
+import { LanceVectorDB } from "../lib/db/vector-db";
 import { IPC_CHANNELS } from "../shared/ipc-constants";
 
 export function initSearchHandle() {
